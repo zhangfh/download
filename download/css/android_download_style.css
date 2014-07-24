@@ -1,0 +1,18 @@
+body{margin:0px; padding:0px; background: #464449; color: #fff;}
+
+#Intro{}
+#IntroDescr{float: left; margin-left: 10px; margin-top: 15px; font-size: 14px; line-height: 21px; font-weight: 100; }
+#Arrow{float: right;margin-top: 10px; margin-right: 30px; width: 80px; height: 48px; background:url(images/android_download_arrow.png) no-repeat; background-size: 80px 48px;}
+#DownloadURL{ padding: 10px; font-size: 14px; border: 1px solid #303030; border-radius: 4px; background: #393939;}
+.clr{clear:both;}
+
+h2{font-size: 14px; font-weight: 500; margin-left: 10px; line-height: 21px;}
+h2.margin_top{margin-top:50px;}
+
+#Markets{margin-left: 10px; margin-top: 10px;}
+#Markets .market{width: 140px; height: 40px; float: left; margin-right: 15px; margin-bottom: 25px; }
+
+#GooglePlay{background:url(images/wechat_googleplay.png) no-repeat;  background-size: 140px 40px;}
+#Wandoujia{background:url(images/wechat_wandoujia.png) no-repeat;  background-size: 140px 40px;}
+#Xiaomi{background:url(images/wechat_xiaomi.png) no-repeat;  background-size: 140px 40px;}
+#Fuck360{background:url(images/wechat_360.png) no-repeat;  background-size: 140px 40px;}

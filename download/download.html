@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link href="http://localhost/download/css/android_download_style.css" rel="stylesheet" type="text/css">
+	<style type="text/css"></style>
+	<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+	<script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script>
+</head>
+<body screen_capture_injected="true">
+
+
+<div id="MainContent" style="display:none;">
+	
+	<div di="Intro">
+		<div id="IntroDescr">由于在微信中不能直接下载 apk 文件，请点击右上角按钮，选择「在浏览器中打开」。</div>
+		<div id="Arrow"></div>
+		<div class="clr"></div>
+	</div>
+	
+<!--
+	<h2 class="margin_top">复制下载链接</h2>
+	<div id="DownloadURL">http://airstatic-airstatic.stor.sinaapp.com/app/DirtyBeijing.apk</div>
+	
+-->
+	<h2 class="margin_top">也可在以下应用市场中下载：</h2>
+	<div id="Markets">
+		<a id="GooglePlay" href="https://play.google.com/store/apps/details?id=com.freshideas.airindex" class="market"></a>
+		<a id="Wandoujia" href="http://www.wandoujia.com/apps/com.freshideas.airindex" class="market"></a>
+		<a id="Xiaomi" href="http://app.xiaomi.com/detail/22321" class="market"></a>
+		<a id="Fuck360" href="http://zhushou.360.cn/detail/index/soft_id/216670" class="market"></a>
+	</div>
+	
+</div>
+
+<script type="text/javascript">
+
+var UA = navigator.userAgent.toLowerCase();
+
+if(UA.indexOf("MicroMessenger") != -1 || UA.indexOf("micromessenger") != -1)
+{
+	
+	document.getElementById("MainContent").style.display = "block";
+	document.getElementById("IntroDescr").style.width = document.body.clientWidth - 125 + "px";
+	
+}
+else
+{
+	if(Request("utm_medium") == "ctrip")
+	{
+		window.location.href = "http://localhost/app/1.apk";
+	}
+	else if(Request("utm_source") == "pingan" && Request("utm_medium") == "weixin")
+	{
+		window.location.href = "http://localhost/app/1.apk";
+	}
+	else
+	{
+		window.location.href = "http://localhost/app/1.apk";
+	}
+
+}
+
+function Request(argname) 
+{ 
+	var url = document.location.href; 
+	var arrStr = url.substring(url.indexOf("?")+1).split("&"); 
+	//return arrStr; 
+	for(var i =0;i<arrStr.length;i++) 
+	{ 
+		var loc = arrStr[i].indexOf(argname+"="); 
+	
+	if(loc!=-1) 
+	{ 
+		return arrStr[i].replace(argname+"=","").replace("?",""); 
+		break; 
+	} 
+	
+	} 
+	return "";
+}
+
+</script>
+</body>
+</html>
